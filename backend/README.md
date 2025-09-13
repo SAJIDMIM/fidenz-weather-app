@@ -1,61 +1,80 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <a href="https://laravel.com" target="_blank">
+    <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo">
+  </a>
 </p>
 
-## About Laravel
+<p align="center">
+  <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+  <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+  <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+  <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
+## Weather API App
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Weather API App is a web application built with Angular frontend and Laravel backend that allows users to view current weather data for multiple cities. The application is secured using Auth0 authentication with Multi-Factor Authentication (MFA).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Features
 
-## Learning Laravel
+- User authentication using Auth0.
+- Multi-Factor Authentication via email or push notification.
+- Restricted login (public signups disabled).
+- Fetches real-time weather data from OpenWeatherMap API.
+- Displays weather with temperature, status, and icons.
+- Responsive design using CSS Grid.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Tech Stack
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- Frontend: Angular 17, TypeScript, HTML, CSS
+- Backend:Laravel 10, PHP 8+
+- Authentication: Auth0 (OAuth2, JWT),MFA
+- Weather Data:OpenWeatherMap API
+- Database:(Optional) MySQL for caching weather data
+- Other:RxJS for HTTP calls, Observables
+- POSTMAN : Used to test the api endpoints before actually depends on website.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
+## Setup Instructions
 
-## Laravel Sponsors
+ *****Backend Laravel****
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+1.Create the app called  "Fidenz - Weather API App".
+2.Move back to "Fidenz - Weather API App" by using cd.
+3.Then created backend folder and same process is done for Frontend also.
+4.Intalled Composer Libraries.
+5.Created to store .env file to openweathermap api key.
+6.Then run php laravel migrate to check database for caching using php artisan migrate.
+7.Started the Server using php artisan serve.
 
-### Premium Partners
+****Frontend****
+1.Same Like Backend.
+2.Install angular libraries using  npm install -g @angular/cli
+3.Then created frontend folder and Started the angular server using ng serve --open.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+*****Authentication****
+1.Before login into site first should verify themselves into an app that using MFA called Guardian.
+2.Then you can enter the Login Credentials and click continue.
+3.User will promptly asked the verification code to access to the weather data.
+4.If login success -> Shows data if not -> not authentication is failed.
 
-## Contributing
+*****Weather Data ****
+1.It will shows the data with CityCode with current status and temperation.
+2.You can logout whenever needed and again proceed with same steps that asked in authentication.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+*****GitHub Creation****
+1.Git Status to view status.
+2.Create a repo in GitHub
+3.Add the frontend + backend files to same folder or repo.
+4.Had a several committed messages stating each task done.
+5.Then finally push it to GitHub.
+6.I followed these steps once my per task done.
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Backend (Laravel)
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+1. Clone the repository:
+```bash
+git clone <your-repo-link>
+cd "Fidenz - Weather API App/backend"
