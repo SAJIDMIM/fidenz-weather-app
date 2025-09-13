@@ -40,11 +40,11 @@ Weather API App is a web application built with Angular frontend and Laravel bac
 
  *****Backend Laravel****
 
-1.Create the app called  "Fidenz - Weather API App".
+1.Create the app called  "Fidenz - Weather API App" using mkdir.
 2.Move back to "Fidenz - Weather API App" by using cd.
-3.Then created backend folder and same process is done for Frontend also.
+3.Then created backend folder and same process is done for Frontend also using composer create-project laravel/backend.
 4.Intalled Composer Libraries.
-5.Created to store .env file to openweathermap api key.
+5.Created to store .env file to openweathermap api key using manually.
 6.Then run php laravel migrate to check database for caching using php artisan migrate.
 7.Started the Server using php artisan serve.
 
@@ -53,22 +53,38 @@ Weather API App is a web application built with Angular frontend and Laravel bac
 2.Install angular libraries using  npm install -g @angular/cli
 3.Then created frontend folder and Started the angular server using ng serve --open.
 
+*****How Authentication created in Auth****
+1.Create an account first.
+2.Go to dashboard and create a new application with auth and stacks details.
+3.Once it is created.Enabled the MFA in Security for secure authentication.
+4.Disable Sign Up enabled using User Management  before this add databse connection with email and password given.
+5.Test the login functionality on Auth and connected with laravel backend to frotend in order to get worked.
+6.Copied Domain and Cliient ID address into my code and do authentication.
+
+
+
 *****Authentication****
 1.Before login into site first should verify themselves into an app that using MFA called Guardian.
 2.Then you can enter the Login Credentials and click continue.
 3.User will promptly asked the verification code to access to the weather data.
 4.If login success -> Shows data if not -> not authentication is failed.
 
-*****Weather Data ****
+*****How I got api key ****
+1.Create an account.
+2.Create an api key and give a name for an app.
+3.Once it is done it has been created.
+
+
+*****Weather Data **** From *** OpenWeatherMapApi***
 1.It will shows the data with CityCode with current status and temperation.
 2.You can logout whenever needed and again proceed with same steps that asked in authentication.
 
 *****GitHub Creation****
-1.Git Status to view status.
-2.Create a repo in GitHub
-3.Add the frontend + backend files to same folder or repo.
-4.Had a several committed messages stating each task done.
-5.Then finally push it to GitHub.
+1.Git Status to view status using git status.
+2.Create a repo in GitHub manually.
+3.Add the frontend + backend files to same folder or repo using git add.
+4.Had a several committed messages stating each task done using git commit -m "message".
+5.Then finally push it to GitHub using git push -u origin main.
 6.I followed these steps once my per task done.
 
 
